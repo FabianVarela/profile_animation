@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:profile_animation/animation/counter_animation.dart';
-import 'package:profile_animation/animation/custom_animation.dart';
-import 'package:profile_animation/animation/ease_animation.dart';
-import 'package:profile_animation/animation/tween_animation.dart';
+import 'package:profile_animation/ui/profile_detail_animation.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,23 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyHomePage(title: 'Animations'),
+      home: ProfileDetailAnimation(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: CustomAnimation()));
   }
 }
