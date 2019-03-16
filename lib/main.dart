@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_animation/animation/counter_animation.dart';
+import 'package:profile_animation/animation/custom_animation.dart';
 import 'package:profile_animation/animation/ease_animation.dart';
 import 'package:profile_animation/animation/tween_animation.dart';
 
@@ -29,6 +30,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: TweenAnimation()));
+    return Scaffold(body: Center(child: CustomAnimation()));
   }
 }
