@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:profile_animation/model/profile.dart';
+import 'package:profile_animation/ui/language_card.dart';
 import 'package:profile_animation/ui/profile_detail_intro_animation.dart';
 import 'dart:ui' as ui;
 
@@ -48,7 +49,11 @@ class ProfileDetailPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[_createLogoAvatar(), _createAboutProfile()],
+        children: <Widget>[
+          _createLogoAvatar(),
+          _createAboutProfile(),
+          _createCourseScroller()
+        ],
       ),
     );
   }
@@ -122,6 +127,30 @@ class ProfileDetailPage extends StatelessWidget {
                 height: 1.4),
           )
         ],
+      ),
+    );
+  }
+
+  Widget _createCourseScroller() {
+    return Padding(
+      padding: EdgeInsets.only(
+        top: 14,
+      ),
+      child: Transform(
+        transform: Matrix4.translationValues(
+            animation.animationLangScrollerXTranslation.value, 0, 0),
+        child: SizedBox.fromSize(
+          size: Size.fromHeight(250),
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: 7),
+            itemCount: profile.languages.length,
+            itemBuilder: (BuildContext context, int position) {
+              var lang = profile.languages[position];
+              return LanguageCard(lang);
+            },
+          ),
+        ),
       ),
     );
   }

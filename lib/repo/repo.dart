@@ -9,11 +9,11 @@ class RepoData {
       about: "Software developer, creating backend services, web applications "
           "and mobile applications, passionate creating things",
       languages: <Language>[
-        Language(title: "C#", thumbnail: "", url: ""),
-        Language(title: "Javascript", thumbnail: "", url: ""),
-        Language(title: "Dart", thumbnail: "", url: ""),
-        Language(title: "Kotlin", thumbnail: "", url: ""),
-        Language(title: "Android", thumbnail: "", url: ""),
-        Language(title: "Flutter", thumbnail: "", url: "")
+        Language(title: "C#", thumbnail: "csharp.jpg", url: "https://es.wikipedia.org/wiki/C_Sharp"),
+        Language(title: "Javascript", thumbnail: "javascript.jpg", url: "https://es.wikipedia.org/wiki/JavaScript"),
+        Language(title: "Dart", thumbnail: "dart.jpg", url: "https://es.wikipedia.org/wiki/Dart"),
+        Language(title: "Kotlin", thumbnail: "kotlin.jpg", url: "https://es.wikipedia.org/wiki/Kotlin_(lenguaje_de_programaci%C3%B3n)"),
+        Language(title: "Android", thumbnail: "android.jpg", url: "https://es.wikipedia.org/wiki/Android"),
+        Language(title: "Flutter", thumbnail: "flutter.jpg", url: "https://es.wikipedia.org/wiki/Flutter_(software)")
       ]);
 }
