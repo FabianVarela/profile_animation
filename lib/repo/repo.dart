@@ -2,7 +2,7 @@ import 'package:profile_animation/model/profile.dart';
 
 class RepoData {
   static final Profile profile = Profile(
-      name: "Fabian Varela Bonett",
+      name: "Fabián Varela Bonett",
       location: "Bogotá, Colombia",
       logo: "logo.png",
       backdropPhoto: "profile.jpg",

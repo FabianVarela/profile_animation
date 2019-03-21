@@ -48,7 +48,7 @@ class ProfileDetailPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[_createLogoAvatar()],
+        children: <Widget>[_createLogoAvatar(), _createAboutProfile()],
       ),
     );
   }
@@ -83,6 +83,45 @@ class ProfileDetailPage extends StatelessWidget {
                 ))
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _createAboutProfile() {
+    return Padding(
+      padding: EdgeInsets.only(top: 14, left: 14, right: 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            "${profile.name}",
+            style: TextStyle(
+                color: Colors.white
+                    .withOpacity(animation.animationNameOpacity.value),
+                fontSize: 30 * animation.animationImageSize.value + 2,
+                fontWeight: FontWeight.bold),
+          ),
+          Text(
+            "${profile.location}",
+            style: TextStyle(
+                color: Colors.white
+                    .withOpacity(animation.animationLocationOpacity.value),
+                fontWeight: FontWeight.w500),
+          ),
+          Container(
+            color: Colors.white.withOpacity(0.7),
+            margin: EdgeInsets.symmetric(vertical: 14),
+            width: animation.animationDividerWidth.value,
+            height: 1,
+          ),
+          Text(
+            "${profile.about}",
+            style: TextStyle(
+                color: Colors.white
+                    .withOpacity(animation.animationAboutOpacity.value),
+                height: 1.4),
+          )
+        ],
       ),
     );
   }
